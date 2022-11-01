@@ -8,27 +8,36 @@ Combustivel (em litros): 2
 Consumo médio (km/l): 8
 Postos de Gasolina (km): [2, 15, 22, 10.2]
 */
-combustivel = 0;
-consumo = 0;
-postosDeGasolina = [2, 15, 22, 10.2];
-function ultimaParada(combustivel, consumo, postosDeGasolina) {
-  valor = distanciaPercorrida(2, 8);
-  if (valor < 6) {
-    return postosDeGasolina[0];
-  } else if (valor >= 6 && valor < 12) {
-    return postosDeGasolina[3];
-  } else if (valor >= 12 && valor < 19) {
-    return postosDeGasolina[1];
-  } else if (valor >= 20) {
-    return postosDeGasolina[2];
-  } else {
-    return -1;
-  }
+function ordenarArray(array) {
+  return array.sort(function (a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
 }
 
-function distanciaPercorrida(combustivel, consumo) {
-  return combustivel * consumo;
+function ultimaParada(combustivel, consumo, array) {
+  arrayOrdenado = ordenarArray(array);
+  quilometragemTotal = combustivel * consumo;
+
+  ultimoElementoMenor = arrayOrdenado[0];
+  for (var i = 0; i < arrayOrdenado.length; i++) {
+    element = arrayOrdenado[i];
+    if (element == ultimoElementoMenor && quilometragemTotal < element) {
+      return -1;
+    }
+    if (quilometragemTotal < element) {
+      return ultimoElementoMenor;
+    } else if (quilometragemTotal == element) {
+      return quilometragemTotal;
+    } else if (quilometragemTotal > element) {
+      ultimoElementoMenor = element;
+    }
+  }
+  return ultimoElementoMenor;
 }
+
+console.log(ultimaParada(2, 4, [2, 15, 22, 10.2]));
 
 // let assert = require("chai").assert;
 // describe("Ultima Parada", function () {
