@@ -53,10 +53,3 @@ function calculaNumeroDaSenha(senha) {
   }
   return parseInt(result.join(""), 2);
 }
-
-// let assert = require("chai").assert;
-// describe('Retorna Menor E Maior Valor De Vendas', function() {
-//   it('Retorna O Menor E Maior Valor De Vendas', function() {
-//     assert.deepEqual(retornaMenorEMaiorValorDeVendas([[200,100],[300]]), [100,300]);
-//   });
-// });
