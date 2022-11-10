@@ -1,7 +1,8 @@
 const insert = document.getElementById("insert");
 
+// O innerHTML colocar o conteúdo no HTML
 window.addEventListener("keydown", (e) => {
-  insert.innerHTML = `
+  insert.innerHTML = `  
     <div class="key">
         ${e.key === " " ? "Space" : e.key}
         <small>event.key</small>
