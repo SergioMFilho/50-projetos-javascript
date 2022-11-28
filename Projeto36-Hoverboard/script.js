@@ -31,3 +31,7 @@ function getRandomColor() {
   // Retornando uma cor aleatória do array
   return colors[Math.floor(Math.random() * colors.length)];
 }
+
+// Projeto criado em javaScript com o princípio de criação de divs
+// Por meio do método appendChild é possível adicionar elementos a DOM
+// Math.floor(Math.random() * colors.length) pega o ELEm aleatória do array
