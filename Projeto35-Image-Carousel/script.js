@@ -43,3 +43,9 @@ leftBtn.addEventListener("click", () => {
   changeImage();
   resetInterval();
 });
+
+//de dedwededewdewdewdewewdedewdewdewdewdew
+//de dedwededewdewdewdewewdedewdewdewdewdew
+//de dedwededewdewdewdewewdedewdewdewdewdew
+//de dedwededewdewdewdewewdedewdewdewdewdew
+//de dedwededewdewdewdewewdedewdewdewdewdew
